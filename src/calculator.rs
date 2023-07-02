@@ -53,3 +53,52 @@ fn modulo(a: i8, b: i8) -> i8 {
 fn power(a: i8, b: i8) -> i8 {
     return a.pow(b as u32);
 }
+
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_addition() {
+        assert_eq!(calculate(1, 2, "+"), Ok(3));
+    }
+
+    #[test]
+    fn test_subtraction() {
+        assert_eq!(calculate(5, 2, "-"), Ok(3));
+    }
+
+    #[test]
+    fn test_multiplication() {
+        assert_eq!(calculate(4, 2, "*"), Ok(8));
+    }
+
+    #[test]
+    fn test_division() {
+        assert_eq!(calculate(10, 2, "/"), Ok(5));
+    }
+
+    #[test]
+    fn test_modulo() {
+        assert_eq!(calculate(11, 3, "%"), Ok(2));
+    }
+
+    #[test]
+    fn test_power() {
+        assert_eq!(calculate(2, 3, "^"), Ok(8));
+    }
+
+    #[test]
+    fn test_unsupported_operation() {
+        assert_eq!(calculate(5, 2, "&"), Err("The operation given is not supported"));
+    }
+
+    // Add a test to ensure correct behavior when division by zero is attempted
+    #[test]
+    #[should_panic]
+    fn test_division_by_zero() {
+        calculate(10, 0, "/").unwrap();
+    }
+}
