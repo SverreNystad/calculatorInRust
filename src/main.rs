@@ -2,8 +2,7 @@ mod calculator;
 use crate::calculator::{calculate};
 
 fn main() {
-    println!("Hello, world!");
-    let number: i8 = 0;
+    println!("Hello, world! Use my calculator");
     let a = 2;
     let b = 6;
     

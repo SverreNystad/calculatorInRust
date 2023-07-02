@@ -1,5 +1,3 @@
-use std::default;
-
 /** Calculates the integer based on the operation given */
 pub fn calculate(a: i8, b: i8, operatorString : &str) -> Result<i8, &str> {
     let op = giveOperation(operatorString);
