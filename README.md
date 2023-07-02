@@ -22,4 +22,4 @@ This command will compile and run the Rust project, printing the result of the d
 
 ## Acknowledgements
 
-Special thanks to Arnstein for his valuable contributions to the coding part of the project, and to Tim Matras for his guidance and mentorship throughout the project's development.
+Special thanks to Arnstein Molvig for his valuable contributions to the coding part of the project, and to Tim Matras for his guidance and mentorship throughout the project's development.
